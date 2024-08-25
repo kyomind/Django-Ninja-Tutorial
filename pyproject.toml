@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "django-ninja-tutorial"
+version = "0.1.0"
+description = "A Django project to demonstrate how to use Django Ninja"
+authors = ["Kyo Huang <odinxp@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^4.2"
+django-stubs = "^5.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
