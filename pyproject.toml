@@ -1,22 +1,44 @@
 [tool.poetry]
+authors = ["Kyo Huang <odinxp@gmail.com>"]
+description = "A Django project to demonstrate how to use Django Ninja"
 name = "django-ninja-tutorial"
 version = "0.1.0"
-description = "A Django project to demonstrate how to use Django Ninja"
-authors = ["Kyo Huang <odinxp@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.12"
 django = "^4.2"
 django-stubs = "^5.0.4"
+python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "0.6.3"
-pre-commit = "^3.8.0"
-mypy = "^1.11.2"
 django-stubs = "^5.0.4"
+mypy = "^1.11.2"
+pre-commit = "^3.8.0"
 pytest = "^8.3.2"
 pytest-django = "^4.9.0"
+ruff = "0.6.3"
 
 [build-system]
-requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[project]
+requires-python = ">=3.12" #影響pyupgrade檢查與自動修正的版本
+
+[tool.ruff] # https://docs.astral.sh/ruff/settings/#top-level
+exclude = ["**/migrations/", "**/manage.py"] # 排除 migrations 目錄和 manage.py 檔案
+line-length = 100
+
+[tool.ruff.lint] # https://docs.astral.sh/ruff/settings/#lint
+ignore = [
+  "E402", # module level import not at top of file
+]
+select = [
+  "E", # pycodestyle errors
+  "W", # pycodestyle warnings
+  "F", # pyflakes
+  "I", # isort
+  "UP", # pyupgrade
+]
+
+[tool.ruff.format] # https://docs.astral.sh/ruff/settings/#format
+quote-style = "single" # 引號風格，雙引號是預設值
