@@ -19,13 +19,9 @@ class Post(models.Model):
 # 評論 (Comment) 模型
 class Comment(models.Model):
     content = models.TextField()  # 評論內容
-    post = models.ForeignKey(
-        Post, related_name="comments", on_delete=models.CASCADE
-    )  # 所屬文章
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE
-    )  # 評論者 (關聯到自定義 User 模型)
+    post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)  # 所屬文章
+    author = models.ForeignKey(User, on_delete=models.CASCADE)  # 評論者 (關聯到自定義 User 模型)
     created_at = models.DateTimeField(auto_now_add=True)  # 評論時間
 
     def __str__(self) -> str:
-        return f"Comment by {self.author.username} on {self.post.title}"
+        return f'Comment by {self.author.username} on {self.post.title}'
