@@ -1,6 +1,6 @@
 from django.db.models import QuerySet
 from django.http import HttpRequest
-from ninja import Router
+from ninja import Query, Router
 
 from post.models import Post
 
@@ -8,7 +8,7 @@ router = Router()
 
 
 @router.get(path='/posts/')
-def get_posts(request: HttpRequest, title: None | str = None) -> QuerySet[Post]:
+def get_posts(request: HttpRequest, title: None | str = Query(None)) -> QuerySet[Post]:
     posts = Post.objects.all()
     if title:
         posts = posts.filter(title__icontains=title)
