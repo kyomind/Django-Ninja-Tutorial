@@ -3,6 +3,7 @@ from django.http import HttpRequest
 from ninja import Query, Router
 
 from post.models import Post
+from post.schemas import CreatePostRequest
 
 router = Router()
 
@@ -22,3 +23,13 @@ def get_posts(
 def get_post(request: HttpRequest, post_id: int) -> Post:
     post = Post.objects.get(id=post_id)
     return post
+
+
+@router.post(path='/posts/')
+def create_post(request: HttpRequest, payload: CreatePostRequest) -> dict:
+    post = Post.objects.create(
+        title=payload.title,
+        content=payload.content,
+        author_id=payload.user_id,
+    )
+    return {'id': post.id, 'title': post.title}
