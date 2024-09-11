@@ -7,7 +7,7 @@ from .models import User
 router = Router()
 
 
-@router.get(path='/')
+@router.get(path='/users/')
 def get_users(request: HttpRequest) -> QuerySet[User]:
     users = User.objects.all()
     return users
