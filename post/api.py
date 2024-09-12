@@ -3,7 +3,7 @@ from django.http import HttpRequest
 from ninja import Query, Router
 
 from post.models import Post
-from post.schemas import CreatePostRequest
+from post.schemas import CreatePostRequest, PostResponse
 
 router = Router()
 
@@ -22,7 +22,7 @@ def get_posts(
     return posts
 
 
-@router.get(path='/posts/{int:post_id}/')
+@router.get(path='/posts/{int:post_id}/', response=PostResponse)
 def get_post(request: HttpRequest, post_id: int) -> Post:
     """
     取得單一文章
