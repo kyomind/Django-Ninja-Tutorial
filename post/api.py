@@ -8,7 +8,7 @@ from post.schemas import CreatePostRequest, PostResponse
 router = Router()
 
 
-@router.get(path='/posts/')
+@router.get(path='/posts/', response=list[PostResponse])
 def get_posts(
     request: HttpRequest,
     title: None | str = Query(None, min_length=2, max_length=10),
