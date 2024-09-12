@@ -26,10 +26,10 @@ def get_post(request: HttpRequest, post_id: int) -> Post:
 
 
 @router.post(path='/posts/')
-def create_post(request: HttpRequest, payload: CreatePostRequest) -> dict:
+def create_post(request: HttpRequest, payload: CreatePostRequest) -> tuple[int, dict]:
     post = Post.objects.create(
         title=payload.title,
         content=payload.content,
         author_id=payload.user_id,
     )
-    return {'id': post.id, 'title': post.title}
+    return 201, {'id': post.id, 'title': post.title}
