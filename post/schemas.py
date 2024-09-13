@@ -9,10 +9,16 @@ class CreatePostRequest(Schema):
     user_id: int
 
 
+class _AuthorInfo(Schema):
+    id: int
+    username: str
+    email: str
+
+
 class PostResponse(Schema):
     id: int
     title: str
     content: str
-    author_id: int
+    author: _AuthorInfo
     created_at: datetime
     updated_at: datetime

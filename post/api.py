@@ -25,7 +25,7 @@ def get_posts(
 @router.get(path='/posts/{int:post_id}/', response=PostResponse)
 def get_post(request: HttpRequest, post_id: int) -> Post:
     """
-    取得單一文章
+    取得單一文章資訊
     """
     post = Post.objects.get(id=post_id)
     return post
