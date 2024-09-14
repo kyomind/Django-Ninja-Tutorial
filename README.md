@@ -54,7 +54,7 @@
 ## 第七章：其他重要事項
 
 - 卷 26：認證（Authentication）
-- 卷 27：單元測試（一）Test Client 與 pytest Fixtures**
+- 卷 27：單元測試（一）Test Client 與 pytest Fixtures
 - 卷 28：單元測試（二）測試函式與覆蓋率
 - 卷 29：部署——Gunicorn 與容器化
 
