@@ -3,12 +3,12 @@ from django.http import HttpRequest
 from ninja import Query, Router
 
 from post.models import Post
-from post.schemas import CreatePostRequest, PostResponse
+from post.schemas import CreatePostRequest, PostListResponse, PostResponse
 
 router = Router()
 
 
-@router.get(path='/posts/', response=list[PostResponse])
+@router.get(path='/posts/', response=list[PostListResponse])
 def get_posts(
     request: HttpRequest,
     title: None | str = Query(None, min_length=2, max_length=10),
@@ -18,14 +18,14 @@ def get_posts(
     """
     posts = Post.objects.all()
     if title:
-        posts = posts.filter(title__icontains=title)
+        posts = posts.filter(title__icontains=title).select_related('author')
     return posts
 
 
 @router.get(path='/posts/{int:post_id}/', response=PostResponse)
 def get_post(request: HttpRequest, post_id: int) -> Post:
     """
-    取得單一文章
+    取得單一文章資訊
     """
     post = Post.objects.get(id=post_id)
     return post
