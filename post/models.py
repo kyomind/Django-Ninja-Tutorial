@@ -14,6 +14,10 @@ class Post(models.Model):
     def __str__(self) -> str:
         return self.title
 
+    @property
+    def author_name(self) -> str:
+        return self.author.username
+
 
 # 評論 (Comment) 模型
 class Comment(models.Model):

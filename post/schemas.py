@@ -22,3 +22,10 @@ class PostResponse(Schema):
     author: _AuthorInfo
     created_at: datetime
     updated_at: datetime
+
+
+class PostListResponse(Schema):
+    id: int
+    title: str
+    created_at: datetime
+    author_name: str
