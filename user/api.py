@@ -8,6 +8,6 @@ router = Router()
 
 
 @router.get(path='/users/')
-def get_users(request: HttpRequest) -> QuerySet[User]:
+def get_users(request: HttpRequest) -> list[str]:
     users = User.objects.all()
-    return users
+    return [user.username for user in users]
