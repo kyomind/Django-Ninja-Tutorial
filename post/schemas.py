@@ -39,3 +39,7 @@ class PostListResponse(Schema):
     title: str
     created_at: datetime
     author_name: str
+
+    @staticmethod
+    def resolve_created_at(obj: Post) -> str:
+        return obj.created_at.strftime('%Y-%m-%dT%H:%M:%SZ')
