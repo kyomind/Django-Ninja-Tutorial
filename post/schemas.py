@@ -2,6 +2,8 @@ from datetime import datetime
 
 from ninja import Schema
 
+from post.models import Post
+
 
 class CreatePostRequest(Schema):
     title: str
@@ -22,6 +24,14 @@ class PostResponse(Schema):
     author: _AuthorInfo
     created_at: datetime
     updated_at: datetime
+
+    @staticmethod
+    def resolve_created_at(obj: Post) -> str:
+        return obj.created_at.strftime('%Y-%m-%dT%H:%M:%SZ')
+
+    @staticmethod
+    def resolve_updated_at(obj: Post) -> str:
+        return obj.updated_at.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 
 class PostListResponse(Schema):
