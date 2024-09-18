@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from ninja import Schema
+from ninja import Field, Schema
 
 from post.models import Post
 
@@ -38,7 +38,7 @@ class PostListResponse(Schema):
     id: int
     title: str
     created_at: datetime
-    author_name: str
+    author_name: str = Field(alias="author.username")
 
     @staticmethod
     def resolve_created_at(obj: Post) -> str:
