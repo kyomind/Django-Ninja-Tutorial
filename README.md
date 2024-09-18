@@ -4,13 +4,13 @@
 
 - [卷 1：系列導讀 × 目標讀者](https://blog.kyomind.tw/django-ninja-01/)
 - [卷 2：架構 × 章節導覽](https://blog.kyomind.tw/django-ninja-02/)
-- 卷 3：Django Ninja 介紹——與 Django REST framework 主要區別
+- [卷 3：Django Ninja 介紹——與 Django REST framework 主要區別](https://blog.kyomind.tw/django-ninja-03/)
 
 ## 第二章：範例專案與環境設定
 
-- 卷 4：範例專案介紹
-- 卷 5：Python 現代開發工具介紹
-- 卷 6：環境設定 × 如何使用本專案
+- [卷 4：範例專案介紹](https://blog.kyomind.tw/django-ninja-04/)
+- [卷 5：Python 現代開發工具介紹](https://blog.kyomind.tw/django-ninja-05/)
+- [卷 6：環境設定 × 如何使用本專案](https://blog.kyomind.tw/django-ninja-06/)
 
 ## 第三章：Django Ninja 基本功
 
@@ -30,8 +30,8 @@
 
 - 卷 13：回應（一）Django Ninja 處理回應概論
 - 卷 14：回應（二）Nested Response
-- 卷 15：回應（三）為什麼不使用 ModelSchema？—— Django Ninja 與 DRF 的設計理念比較
-- 卷 16：回應（四）Resolver 方法（類似 DRF 的 SerializerMethodField）
+- 卷 15：回應（三）為什麼不使用 ModelSchema？——相比 DRF，我更偏愛 Django Ninja 的理由
+- 卷 16：回應（四）Resolver 方法——欄位資料格式化
 
 ## 第四章：API 文件
 
