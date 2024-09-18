@@ -8,7 +8,7 @@ from post.schemas import CreatePostRequest, PostListResponse, PostResponse
 router = Router()
 
 
-@router.get(path='/posts/', response=list[PostListResponse])
+@router.get(path='/posts/', response=list[PostListResponse], summary='取得文章列表')
 def get_posts(
     request: HttpRequest,
     title: None | str = Query(None, min_length=2, max_length=10),
@@ -22,7 +22,7 @@ def get_posts(
     return posts
 
 
-@router.get(path='/posts/{int:post_id}/', response=PostResponse)
+@router.get(path='/posts/{int:post_id}/', response=PostResponse, summary='取得單一文章資訊')
 def get_post(request: HttpRequest, post_id: int) -> Post:
     """
     取得單一文章資訊
@@ -31,7 +31,7 @@ def get_post(request: HttpRequest, post_id: int) -> Post:
     return post
 
 
-@router.post(path='/posts/')
+@router.post(path='/posts/', summary='新增文章')
 def create_post(request: HttpRequest, payload: CreatePostRequest) -> tuple[int, dict]:
     """
     新增文章
