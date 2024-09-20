@@ -16,8 +16,8 @@
 
 ### 第一節：路由（Routers）
 
-- 卷 7：路由（上）傳統 Django 路由做法（兼章節概論）
-- 卷 8：路由（下）Django Ninja 路由
+- [卷 7：路由（上）傳統 Django 路由做法（兼章節概論）](https://blog.kyomind.tw/django-ninja-07/)
+- [卷 8：路由（下）Django Ninja 路由](https://blog.kyomind.tw/django-ninja-08/)
 
 ### 第二節：請求（Request）
 
