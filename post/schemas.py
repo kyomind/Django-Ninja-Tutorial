@@ -12,18 +12,18 @@ class CreatePostRequest(Schema):
 
 
 class _AuthorInfo(Schema):
-    id: int
-    username: str
-    email: str
+    id: int = Field(examples=[1])
+    username: str = Field(examples=['Alice'])
+    email: str = Field(examples=['alice@exapmple.com'])
 
 
 class PostResponse(Schema):
-    id: int
-    title: str
-    content: str
+    id: int = Field(examples=[1])
+    title: str = Field(examples=['Ninja is awesome!'])
+    content: str = Field(examples=['This is my first post.'])
     author: _AuthorInfo
-    created_at: datetime
-    updated_at: datetime
+    created_at: datetime = Field(examples=['2021-01-01T00:00Z'])
+    updated_at: datetime = Field(examples=['2021-01-01T00:00Z'])
 
     @staticmethod
     def resolve_created_at(obj: Post) -> str:
