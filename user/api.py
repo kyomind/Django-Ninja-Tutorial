@@ -13,15 +13,16 @@ def get_users(request: HttpRequest) -> list[str]:
     return [user.username for user in users]
 
 
-@router.post(path='/users/', summary='新增使用者')
+@router.post(path='/users/', summary='新增使用者', response={201: dict})
 def create_user(request: HttpRequest, payload: CreateUserRequest) -> tuple[int, dict]:
     """
     新增使用者
     """
-    user = User.objects.create(
+    user = User(
         username=payload.username,
         email=payload.email,
-        password=payload.password,
         bio=payload.bio,
     )
+    user.set_password(raw_password=payload.password)  # 使用 set_password 方法加密密碼
+    user.save()
     return 201, {'id': user.id, 'username': user.username}
