@@ -19,14 +19,14 @@
 - [卷 7：路由（上）傳統 Django 路由做法（兼章節概論）](https://blog.kyomind.tw/django-ninja-07/)
 - [卷 8：路由（下）Django Ninja 路由](https://blog.kyomind.tw/django-ninja-08/)
 
-### 第二節：請求（Request）
+### 第二節：請求（HTTP Request）
 
-- 卷 9：請求（一）Django Ninja 處理請求概論（兼論 FBVs）
-- 卷 10：請求（二）Path Parameters
-- 卷 11：請求（三）Query Parameters
-- 卷 12：請求（四）Request Body 與 Schema 介紹
+- [卷 9：請求（一）Django Ninja 處理請求概論（兼論 FBVs）](https://blog.kyomind.tw/django-ninja-09/)
+- [卷 10：請求（二）路徑參數（Path Parameters）](https://blog.kyomind.tw/django-ninja-10/)
+- [卷 11：請求（三）查詢參數（Query Parameters）](https://blog.kyomind.tw/django-ninja-11/)
+- [卷 12：請求（四）Request Body 與 Schema 介紹](https://blog.kyomind.tw/django-ninja-12/)
 
-### 第三節：回應（Response）
+### 第三節：回應（HTTP Response）
 
 - 卷 13：回應（一）Django Ninja 處理回應概論
 - 卷 14：回應（二）Nested Response
@@ -36,12 +36,12 @@
 ## 第四章：API 文件
 
 - 卷 17：API 文件的實踐重點
-- 卷 18：Pydantic 與 API 文件
+- 卷 18：用 Pydantic Field 設定範例與預設值
 
 ## 第五章：資料驗證與錯誤處理
 
-- 卷 19：資料驗證
-- 卷 20：錯誤處理
+- 卷 19：資料驗證（Validation）
+- 卷 20：錯誤處理（Error Handling）
 
 ## 第六章：進階功能
 
