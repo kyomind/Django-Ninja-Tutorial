@@ -31,7 +31,7 @@ def get_post(request: HttpRequest, post_id: int) -> Post:
     return post
 
 
-@router.post(path='/posts/', summary='新增文章')
+@router.post(path='/posts/', response={201: dict}, summary='新增文章')
 def create_post(request: HttpRequest, payload: CreatePostRequest) -> tuple[int, dict]:
     """
     新增文章

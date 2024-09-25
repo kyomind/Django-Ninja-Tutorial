@@ -13,7 +13,7 @@ def get_users(request: HttpRequest) -> list[str]:
     return [user.username for user in users]
 
 
-@router.post(path='/users/', summary='新增使用者', response={201: dict})
+@router.post(path='/users/', response={201: dict}, summary='新增使用者')
 def create_user(request: HttpRequest, payload: CreateUserRequest) -> tuple[int, dict]:
     """
     新增使用者
