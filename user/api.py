@@ -1,5 +1,6 @@
 from django.http import HttpRequest
 from ninja import Router
+from ninja.errors import HttpError
 
 from user.models import User
 from user.schemas import CreateUserRequest
@@ -18,6 +19,9 @@ def create_user(request: HttpRequest, payload: CreateUserRequest) -> tuple[int, 
     """
     新增使用者
     """
+    if User.objects.filter(email=payload.email).exists():
+        raise HttpError(409, '使用者 email 已存在')
+
     user = User(
         username=payload.username,
         email=payload.email,

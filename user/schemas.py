@@ -2,6 +2,7 @@ import re
 from typing import Self
 
 from ninja import Field, Schema
+from ninja.errors import HttpError
 from pydantic import field_validator, model_validator
 
 
@@ -25,5 +26,5 @@ class CreateUserRequest(Schema):
     @model_validator(mode='after')
     def check_passwords_match(self) -> Self:
         if self.password != self.confirm_password:
-            raise ValueError('密碼和確認密碼必須相同')
+            raise HttpError(400, '密碼和確認密碼必須相同')
         return self
