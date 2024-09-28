@@ -17,7 +17,7 @@
 ### 第一節：路由（Routers）
 
 - [卷 7：路由（上）傳統 Django 路由做法（兼章節概論）](https://blog.kyomind.tw/django-ninja-07/)
-- [卷 8：路由（下）Django Ninja 路由](https://blog.kyomind.tw/django-ninja-08/)
+- [卷 8：路由（下）Django Ninja 路由設定](https://blog.kyomind.tw/django-ninja-08/)
 
 ### 第二節：請求（HTTP Request）
 
@@ -45,14 +45,14 @@
 - 卷 21：錯誤處理（上）自定義錯誤與 HTTP 回應
 - 卷 22：錯誤處理（下）全域錯誤處理——使用 Exception Handlers
 
-## 第六章：進階功能
+## 第六章：API 進階功能
 
 - 卷 23：檔案上傳
 - 卷 24：分頁（Pagination）
 - 卷 25：過濾（Filtering）
 - 卷 26：限流與快取
 
-## 第七章：其它重要事項
+## 第七章：認證與單元測試
 
 - 卷 27：認證（Authentication）
 - 卷 28：單元測試（一）Test Client 與 pytest Fixtures
