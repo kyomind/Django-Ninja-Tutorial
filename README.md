@@ -1,4 +1,4 @@
-2024 iThome 鐵人賽，Python 組參賽作品——《[Django 忍法帖——Django Ninja 入門指南](https://ithelp.ithome.com.tw/users/20167825/ironman/7451)》範例程式碼專案
+2024 iThome 鐵人賽，Python 組參賽作品——《[Django 忍法帖——Django Ninja 入門指南](https://ithelp.ithome.com.tw/users/20167825/ironman/7451)》**範例程式碼專案**
 
 ## 第一章：導讀與 Django Ninja 介紹
 
@@ -21,17 +21,17 @@
 
 ### 第二節：請求（HTTP Request）
 
-- [卷 9：請求（一）Django Ninja 處理請求概論（兼論 FBVs）](https://blog.kyomind.tw/django-ninja-09/)
+- [卷 9：請求（一）Django Ninja 處理 HTTP 請求概論（兼論 FBVs）](https://blog.kyomind.tw/django-ninja-09/)
 - [卷 10：請求（二）路徑參數（Path Parameters）](https://blog.kyomind.tw/django-ninja-10/)
 - [卷 11：請求（三）查詢參數（Query Parameters）](https://blog.kyomind.tw/django-ninja-11/)
 - [卷 12：請求（四）Request Body 與 Schema 介紹](https://blog.kyomind.tw/django-ninja-12/)
 
 ### 第三節：回應（HTTP Response）
 
-- 卷 13：回應（一）Django Ninja 處理回應概論
-- 卷 14：回應（二）Nested Response
-- 卷 15：回應（三）為什麼不使用 ModelSchema？——相比 DRF，我更偏愛 Django Ninja 的理由
-- 卷 16：回應（四）Resolver 方法——欄位資料格式化
+- [卷 13：回應（一）Django Ninja 處理 HTTP 回應概論](https://blog.kyomind.tw/django-ninja-13/)
+- [卷 14：回應（二）巢狀結構回應](https://blog.kyomind.tw/django-ninja-14/)
+- [卷 15：回應（三）為何不用 ModelSchema？——相比 DRF，我更偏愛 Django Ninja 的理由](https://blog.kyomind.tw/django-ninja-15/)
+- [卷 16：回應（四）Resolver 方法——欄位資料格式化](https://blog.kyomind.tw/django-ninja-16/)
 
 ## 第四章：API 文件
 
@@ -40,23 +40,23 @@
 
 ## 第五章：資料驗證與錯誤處理
 
-- 卷 19：資料驗證（Validation）
-- 卷 20：錯誤處理（Error Handling）
+- 卷 19：資料驗證（上）自定義欄位驗證
+- 卷 20：資料驗證（下）跨欄位驗證
+- 卷 21：錯誤處理（上）自定義錯誤與 HTTP 回應
+- 卷 22：錯誤處理（下）全域錯誤處理——使用 Exception Handlers
 
 ## 第六章：進階功能
 
-- 卷 21：檔案上傳
-- 卷 22：分頁（Pagination）
-- 卷 23：過濾（Filtering）
-- 卷 24：限流（Throttling）
-- 卷 25：快取（Caching）
+- 卷 23：檔案上傳
+- 卷 24：分頁（Pagination）
+- 卷 25：過濾（Filtering）
+- 卷 26：限流與快取
 
-## 第七章：其他重要事項
+## 第七章：其它重要事項
 
-- 卷 26：認證（Authentication）
-- 卷 27：單元測試（一）Test Client 與 pytest Fixtures
-- 卷 28：單元測試（二）測試函式與覆蓋率
-- 卷 29：部署——Gunicorn 與容器化
+- 卷 27：認證（Authentication）
+- 卷 28：單元測試（一）Test Client 與 pytest Fixtures
+- 卷 29：單元測試（二）測試函式與覆蓋率
 
 ## 第八章：系列回顧與完賽心得
 
