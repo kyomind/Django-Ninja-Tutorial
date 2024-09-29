@@ -22,8 +22,8 @@ class PostResponse(Schema):
     title: str = Field(examples=['Ninja is awesome!'])
     content: str = Field(examples=['This is my first post.'])
     author: _AuthorInfo
-    created_at: datetime = Field(examples=['2021-01-01T00:00Z'])
-    updated_at: datetime = Field(examples=['2021-01-01T00:00Z'])
+    created_at: datetime = Field(examples=['2021-01-01T00:00:00Z'])
+    updated_at: datetime = Field(examples=['2021-01-01T00:00:00Z'])
 
     @staticmethod
     def resolve_created_at(obj: Post) -> str:
