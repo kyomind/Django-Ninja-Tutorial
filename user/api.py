@@ -1,5 +1,5 @@
 from django.http import HttpRequest
-from ninja import Router
+from ninja import File, Router, UploadedFile
 from ninja.errors import HttpError
 
 from user.models import User
@@ -30,3 +30,20 @@ def create_user(request: HttpRequest, payload: CreateUserRequest) -> tuple[int, 
     user.set_password(raw_password=payload.password)  # 使用 set_password 方法加密密碼
     user.save()
     return 201, {'id': user.id, 'username': user.username}
+
+
+@router.post(path='/users/{int:user_id}/avatar/', summary='上傳 avatar')
+def upload_avatar(
+    request: HttpRequest, user_id: int, avatar_file: UploadedFile = File()
+) -> dict[str, str]:
+    """
+    上傳 avatar
+    """
+    # 檢查檔案類型
+    if not avatar_file.content_type.startswith('image/'):
+        raise HttpError(400, '檔案必須是圖片格式')
+
+    user = User.objects.get(id=user_id)
+    user.avatar = avatar_file
+    user.save()
+    return {'detail': '圖片上傳成功'}
