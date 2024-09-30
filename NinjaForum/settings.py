@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-o+2r-x=$s*be723daj3kimac$h6b7vkgozaxl0y(xzjve=gqwk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS: list[str] = []
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -126,3 +126,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 定義媒體檔案的 URL 路徑，當使用者上傳檔案時，Django 會透過此 URL 存取它們
+MEDIA_URL = '/media/'
+
+# 定義伺服器端儲存媒體檔案的實際路徑，所有上傳的媒體檔案將會儲存在該資料夾內
+MEDIA_ROOT = BASE_DIR / 'media'
