@@ -35,8 +35,8 @@
 
 ## 第四章：API 文件
 
-- 卷 17：API 文件的實踐重點
-- 卷 18：用 Pydantic Field 設定範例與預設值
+- [卷 17：API 文件（上）Django Ninja 文件實踐指南](https://blog.kyomind.tw/django-ninja-17/)
+- [卷 18：API 文件（下）用 Pydantic Field 設定範例與預設值](https://blog.kyomind.tw/django-ninja-18/)
 
 ## 第五章：資料驗證與錯誤處理
 
