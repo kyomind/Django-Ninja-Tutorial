@@ -20,6 +20,7 @@ class User(AbstractUser):
         related_name='custom_user_permissions_set',  # 自定義 related_name 避免衝突
         blank=True,
     )
+    avatar = models.ImageField(upload_to='avatars/', null=True)
 
     def __str__(self) -> str:
         return self.username
