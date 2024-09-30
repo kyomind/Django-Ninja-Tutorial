@@ -1,3 +1,5 @@
+from django.core.exceptions import ValidationError
+from django.http import HttpRequest, HttpResponse
 from ninja import NinjaAPI
 
 api = NinjaAPI(
@@ -6,3 +8,13 @@ api = NinjaAPI(
 
 api.add_router(prefix='', router='user.api.router', tags=['User'])
 api.add_router(prefix='', router='post.api.router', tags=['Post'])
+
+
+@api.exception_handler(exc_class=ValidationError)
+def django_validation_error_handler(
+    request: HttpRequest, exception: ValidationError
+) -> HttpResponse:
+    """
+    處理 Django ValidationError 例外
+    """
+    return api.create_response(request, {'detail': exception.message}, status=400)

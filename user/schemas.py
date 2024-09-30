@@ -1,8 +1,8 @@
 import re
 from typing import Self
 
+from django.core.exceptions import ValidationError
 from ninja import Field, Schema
-from ninja.errors import HttpError
 from pydantic import field_validator, model_validator
 
 
@@ -20,11 +20,11 @@ class CreateUserRequest(Schema):
         驗證密碼至少包含一個數字
         """
         if not re.search(r'\d', v):
-            raise ValueError('密碼必須包含至少一個數字')
+            raise ValidationError('密碼必須包含至少一個數字')
         return v
 
     @model_validator(mode='after')
     def check_passwords_match(self) -> Self:
         if self.password != self.confirm_password:
-            raise HttpError(400, '密碼和確認密碼必須相同')
+            raise ValidationError('密碼和確認密碼必須相同')
         return self
