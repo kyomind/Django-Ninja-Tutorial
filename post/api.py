@@ -1,6 +1,7 @@
 from django.db.models import QuerySet
 from django.http import HttpRequest
 from ninja import Query, Router
+from ninja.pagination import PageNumberPagination, paginate
 
 from post.models import Post
 from post.schemas import CreatePostRequest, PostListResponse, PostResponse
@@ -9,6 +10,7 @@ router = Router()
 
 
 @router.get(path='/posts/', response=list[PostListResponse], summary='取得文章列表')
+@paginate(PageNumberPagination, page_size=10)
 def get_posts(
     request: HttpRequest,
     title: None | str = Query(None, min_length=2, max_length=10),
