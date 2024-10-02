@@ -40,23 +40,23 @@
 
 ## 第五章：資料驗證與錯誤處理
 
-- 卷 19：資料驗證（上）自定義欄位驗證
-- 卷 20：資料驗證（下）跨欄位驗證
+- [卷 19：資料驗證（上）單一欄位的自定義驗證](https://blog.kyomind.tw/django-ninja-19/)
+- [卷 20：資料驗證（下）跨欄位驗證](https://blog.kyomind.tw/django-ninja-20/)
 - 卷 21：錯誤處理（上）自定義錯誤與 HTTP 回應
 - 卷 22：錯誤處理（下）全域錯誤處理——使用 Exception Handlers
 
 ## 第六章：API 進階功能
 
 - 卷 23：檔案上傳
-- 卷 24：分頁（Pagination）
-- 卷 25：過濾（Filtering）
-- 卷 26：限流與快取
+- 卷 24：分頁（上）Django Ninja 的內建分頁器
+- 卷 25：分頁（下）自義定分頁類別
+- 卷 26：查詢與過濾（Filtering）
 
 ## 第七章：認證與單元測試
 
 - 卷 27：認證（Authentication）
-- 卷 28：單元測試（一）Test Client 與 pytest Fixtures
-- 卷 29：單元測試（二）測試函式與覆蓋率
+- 卷 28：單元測試（上）Test Client 與 pytest Fixtures
+- 卷 29：單元測試（下）測試函式與覆蓋率
 
 ## 第八章：系列回顧與完賽心得
 
