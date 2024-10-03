@@ -1,11 +1,11 @@
-from django.db.models import QuerySet
+from django.db.models import Q, QuerySet
 from django.http import HttpRequest
 from ninja import Query, Router
 from ninja.pagination import paginate
 
 from NinjaForum.pagination import CustomPagination
 from post.models import Post
-from post.schemas import CreatePostRequest, PostListResponse, PostResponse
+from post.schemas import CreatePostRequest, PostFilterSchema, PostListResponse, PostResponse
 
 router = Router()
 
@@ -14,14 +14,15 @@ router = Router()
 @paginate(CustomPagination)
 def get_posts(
     request: HttpRequest,
-    title: None | str = Query(None, min_length=2, max_length=10),
+    filters: PostFilterSchema = Query(),
 ) -> QuerySet[Post]:
     """
     取得文章列表
     """
     posts = Post.objects.all()
-    if title:
-        posts = posts.filter(title__icontains=title).select_related('author')
+    if filters.query:
+        q = Q(title__icontains=filters.query) | Q(content__icontains=filters.query)
+        posts = posts.filter(q)
     return posts
 
 
