@@ -1,3 +1,14 @@
+![Kyo's Django Ninja Tutorial](https://i.imgur.com/5WLyxcH.png)
+
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-blue?labelColor=444&logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![code style - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/format.json?labelColor=444)](https://github.com/astral-sh/ruff)
+[![Python](https://img.shields.io/badge/python-3.12-blue?labelColor=444&logo=python&logoColor=DDD)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/django-4.2-forestgreen?labelColor=444&logo=django)](https://www.djangoproject.com/)
+[![Django Ninja](https://img.shields.io/badge/django--ninja-1.3-darkgreen?labelColor=444&&logoColor=DDD)](https://django-ninja.dev/)
+
+
+
 # Django Ninja 系列教學
 
 [2024 iThome 鐵人賽](https://ithelp.ithome.com.tw/2024ironman/)參賽作品：《[Django 忍法帖——Django Ninja 入門指南](https://ithelp.ithome.com.tw/users/20167825/ironman/7451)》
