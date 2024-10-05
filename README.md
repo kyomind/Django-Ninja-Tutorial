@@ -5,9 +5,7 @@
 [![code style - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/format.json?labelColor=444)](https://github.com/astral-sh/ruff)
 [![Python](https://img.shields.io/badge/python-3.12-blue?labelColor=444&logo=python&logoColor=DDD)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/django-4.2-forestgreen?labelColor=444&logo=django)](https://www.djangoproject.com/)
-[![Django Ninja](https://img.shields.io/badge/django--ninja-1.3-darkgreen?labelColor=444&&logoColor=DDD)](https://django-ninja.dev/)
-
-
+[![Django Ninja](https://img.shields.io/badge/django--ninja-1.3-forestgreen?labelColor=444&&logoColor=DDD)](https://django-ninja.dev/)
 
 # Django Ninja 系列教學
 
@@ -18,6 +16,8 @@
 透過**範例專案**和 **30 篇文章**，你將逐步掌握 Django Ninja 的核心概念與使用方法，並了解它和 Django REST framework 的主要差異。
 
 每個章節均包含具體的程式碼範例，讓你能**邊看邊學**，化理論為實踐。
+
+> 如果你對 Django 教學與 Python 開發文章感興趣，歡迎參考我的姐妹倉庫：[Django-Tutorial](https://github.com/kyomind/Django-Tutorial)。
 
 ## 第一章：導讀與 Django Ninja 介紹
 
