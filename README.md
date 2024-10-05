@@ -1,4 +1,12 @@
-2024 iThome 鐵人賽，Python 組參賽作品——《[Django 忍法帖——Django Ninja 入門指南](https://ithelp.ithome.com.tw/users/20167825/ironman/7451)》**範例程式碼專案**
+# Django Ninja 系列教學
+
+[2024 iThome 鐵人賽](https://ithelp.ithome.com.tw/2024ironman/)參賽作品：《[Django 忍法帖——Django Ninja 入門指南](https://ithelp.ithome.com.tw/users/20167825/ironman/7451)》
+
+這是一份為初學者準備的 Django Ninja 系列教學，旨在幫助你學習 Django Ninja，建立高效且現代的 API。
+
+透過**範例專案**和 **30 篇文章**，你將逐步掌握 Django Ninja 的核心概念與使用方法，並了解它和 Django REST framework 的主要差異。
+
+每個章節均包含具體的程式碼範例，讓你能**邊看邊學**，化理論為實踐。
 
 ## 第一章：導讀與 Django Ninja 介紹
 
@@ -40,23 +48,22 @@
 
 ## 第五章：資料驗證與錯誤處理
 
-- [卷 19：資料驗證（上）單一欄位的自定義驗證](https://blog.kyomind.tw/django-ninja-19/)
-- [卷 20：資料驗證（下）跨欄位驗證](https://blog.kyomind.tw/django-ninja-20/)
-- 卷 21：錯誤處理（上）自定義錯誤與 HTTP 回應
-- 卷 22：錯誤處理（下）全域錯誤處理——使用 Exception Handlers
+- [卷 19：資料驗證（上）單一欄位驗證——使用 Pydantic field_validator](https://blog.kyomind.tw/django-ninja-19/)
+- [卷 20：資料驗證（下）Pydantic model_validator 實現「跨欄位」驗證](https://blog.kyomind.tw/django-ninja-20/)
+- [卷 21：錯誤處理（上）HttpError 與自定義 HTTP 回應](https://blog.kyomind.tw/django-ninja-21/)
+- [卷 22：錯誤處理（下）全域錯誤處理——深入解析 Exception Handlers](https://blog.kyomind.tw/django-ninja-22/)
 
-## 第六章：API 進階功能
-
-- 卷 23：檔案上傳
+## 第六章，API 進階功能
+- 卷 23：檔案上傳——Django UploadedFile 介紹
 - 卷 24：分頁（上）Django Ninja 的內建分頁器
-- 卷 25：分頁（下）自義定分頁類別
-- 卷 26：查詢與過濾（Filtering）
+- 卷 25：分頁（下）自定義分頁類別
+- 卷 26：資料查詢與過濾（上）FilterSchema 介紹
+- 卷 27：資料查詢與過濾（下）FilterSchema 多欄位查詢
 
-## 第七章：認證與單元測試
+## 第七章：身分認證與單元測試
 
-- 卷 27：認證（Authentication）
-- 卷 28：單元測試（上）Test Client 與 pytest Fixtures
-- 卷 29：單元測試（下）測試函式與覆蓋率
+- 卷 28：身分認證（Authentication）
+- 卷 29：單元測試——使用 pytest
 
 ## 第八章：系列回顧與完賽心得
 
