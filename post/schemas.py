@@ -1,6 +1,8 @@
 from datetime import datetime
+from typing import Self
 
 from ninja import Field, FilterSchema, Schema
+from pydantic import model_validator
 
 from post.models import Post
 
@@ -52,5 +54,29 @@ class PostFilterSchema(FilterSchema):
         min_length=2,
         max_length=10,
     )
-    start_date: str | None = Field(None, q="created_at__gte")
-    end_date: str | None = Field(None, q="created_at__lte")
+    start_date: str | None = Field(None, q='created_at__gte')
+    end_date: str | None = Field(None, q='created_at__lte')
+
+    @model_validator(mode='after')
+    def check_date_range(self) -> Self:
+        # 如果開始日期和結束日期都是 None，則不進行任何檢查
+        if self.start_date is None and self.end_date is None:
+            return self
+
+        if not all([self.start_date, self.end_date]):
+            raise ValueError('開始日期和結束日期必須同時提供或同時不提供')
+
+        # 顯式告訴 Mypy 這兩個變數在這裡是非 None 的
+        assert self.start_date is not None
+        assert self.end_date is not None
+
+        try:
+            start_date_dt = datetime.strptime(self.start_date, '%Y-%m-%d')
+            end_date_dt = datetime.strptime(self.end_date, '%Y-%m-%d')
+        except ValueError:
+            raise ValueError('日期格式無效，應為 YYYY-MM-DD')
+
+        if start_date_dt > end_date_dt:
+            raise ValueError('開始日期必須早於結束日期')
+
+        return self
