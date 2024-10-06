@@ -52,3 +52,5 @@ class PostFilterSchema(FilterSchema):
         min_length=2,
         max_length=10,
     )
+    start_date: str | None = Field(None, q="created_at__gte")
+    end_date: str | None = Field(None, q="created_at__lte")
