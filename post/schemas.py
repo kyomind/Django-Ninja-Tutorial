@@ -46,4 +46,9 @@ class PostListResponse(Schema):
 
 
 class PostFilterSchema(FilterSchema):
-    query: str | None = Field(None, min_length=2, max_length=10)
+    query: str | None = Field(
+        None,
+        q=['title__icontains', 'author__username__icontains'],
+        min_length=2,
+        max_length=10,
+    )

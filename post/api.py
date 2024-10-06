@@ -1,4 +1,4 @@
-from django.db.models import Q, QuerySet
+from django.db.models import QuerySet
 from django.http import HttpRequest
 from ninja import Query, Router
 from ninja.pagination import paginate
@@ -19,10 +19,8 @@ def get_posts(
     """
     取得文章列表
     """
-    posts = Post.objects.all()
-    if filters.query:
-        q = Q(title__icontains=filters.query) | Q(content__icontains=filters.query)
-        posts = posts.filter(q)
+    posts = Post.objects.select_related('author')
+    posts = filters.filter(posts)
     return posts
 
 
