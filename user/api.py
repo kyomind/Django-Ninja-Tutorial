@@ -2,7 +2,6 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpRequest
 from ninja import File, Router, UploadedFile
 from ninja.errors import HttpError
-from ninja.security import django_auth
 
 from user.models import User
 from user.schemas import CreateUserRequest, LoginRequest
@@ -34,7 +33,7 @@ def create_user(request: HttpRequest, payload: CreateUserRequest) -> tuple[int, 
     return 201, {'id': user.id, 'username': user.username}
 
 
-@router.post(path='/users/{int:user_id}/avatar/', summary='上傳 avatar', auth=django_auth)
+@router.post(path='/users/{int:user_id}/avatar/', summary='上傳 avatar')
 def upload_avatar(
     request: HttpRequest, user_id: int, avatar_file: UploadedFile = File()
 ) -> dict[str, str]:
@@ -55,7 +54,7 @@ def upload_avatar(
     return {'detail': '圖片上傳成功'}
 
 
-@router.post(path='/users/login/', summary='登入使用者')
+@router.post(path='/users/login/', summary='登入使用者', auth=None)
 def login_user(request: HttpRequest, payload: LoginRequest) -> dict[str, str]:
     """
     登入使用者
