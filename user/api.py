@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpRequest
 from ninja import File, Router, UploadedFile
 from ninja.errors import HttpError
+from ninja.security import django_auth
 
 from user.models import User
 from user.schemas import CreateUserRequest, LoginRequest
@@ -33,13 +34,17 @@ def create_user(request: HttpRequest, payload: CreateUserRequest) -> tuple[int, 
     return 201, {'id': user.id, 'username': user.username}
 
 
-@router.post(path='/users/{int:user_id}/avatar/', summary='上傳 avatar')
+@router.post(path='/users/{int:user_id}/avatar/', summary='上傳 avatar', auth=django_auth)
 def upload_avatar(
     request: HttpRequest, user_id: int, avatar_file: UploadedFile = File()
 ) -> dict[str, str]:
     """
     上傳 avatar
     """
+    # 檢查登入的使用者是否為「本人」
+    if request.auth.id != user_id:
+        raise HttpError(403, '無權限上傳其他使用者的 avatar')
+
     # 檢查檔案類型
     if not avatar_file.content_type.startswith('image/'):
         raise HttpError(400, '檔案必須是圖片格式')
