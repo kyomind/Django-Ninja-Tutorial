@@ -1,9 +1,10 @@
+from django.contrib.auth import authenticate, login
 from django.http import HttpRequest
 from ninja import File, Router, UploadedFile
 from ninja.errors import HttpError
 
 from user.models import User
-from user.schemas import CreateUserRequest
+from user.schemas import CreateUserRequest, LoginRequest
 
 router = Router()
 
@@ -39,6 +40,10 @@ def upload_avatar(
     """
     上傳 avatar
     """
+    # 檢查登入的使用者是否為「本人」
+    if request.auth.id != user_id:
+        raise HttpError(403, '無權限上傳其他使用者的 avatar')
+
     # 檢查檔案類型
     if not avatar_file.content_type.startswith('image/'):
         raise HttpError(400, '檔案必須是圖片格式')
@@ -47,3 +52,16 @@ def upload_avatar(
     user.avatar = avatar_file
     user.save()
     return {'detail': '圖片上傳成功'}
+
+
+@router.post(path='/users/login/', summary='登入使用者', auth=None)
+def login_user(request: HttpRequest, payload: LoginRequest) -> dict[str, str]:
+    """
+    登入使用者
+    """
+    user = authenticate(request, username=payload.username, password=payload.password)
+    if user is not None:
+        login(request, user)  # 將使用者登入狀態保存至 session
+        return {'message': '登入成功'}
+    else:
+        raise HttpError(401, '帳號或密碼錯誤')

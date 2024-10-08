@@ -1,9 +1,13 @@
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
 from django.http import HttpRequest, HttpResponse
 from ninja import NinjaAPI
+from ninja.security import SessionAuth
 
 api = NinjaAPI(
-    title='忍者論壇 API', version='1.0', description='這是忍者論壇的 API 文件，供讀者參考'
+    auth=SessionAuth(),  # 設定全域認證
+    title='忍者論壇 API',
+    version='1.0',
+    description='這是忍者論壇的 API 文件，供讀者參考',
 )
 
 api.add_router(prefix='', router='user.api.router', tags=['User'])

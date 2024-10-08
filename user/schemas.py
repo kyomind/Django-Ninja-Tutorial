@@ -28,3 +28,8 @@ class CreateUserRequest(Schema):
         if self.password != self.confirm_password:
             raise ValidationError('密碼和確認密碼必須相同')
         return self
+
+
+class LoginRequest(Schema):
+    username: str = Field(examples=['Alice'])
+    password: str = Field(examples=['password123'])
