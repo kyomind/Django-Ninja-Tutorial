@@ -65,16 +65,16 @@
 - [卷 22：錯誤處理（下）全域錯誤處理——深入解析 Exception Handlers](https://blog.kyomind.tw/django-ninja-22/)
 
 ## 第六章，API 進階功能
-- 卷 23：檔案上傳——Django UploadedFile 介紹
-- 卷 24：分頁（上）Django Ninja 的內建分頁器
-- 卷 25：分頁（下）自定義分頁類別
-- 卷 26：資料查詢與過濾（上）FilterSchema 介紹
-- 卷 27：資料查詢與過濾（下）FilterSchema 多欄位查詢
+- [卷 23：檔案上傳——Django UploadedFile 介紹](https://blog.kyomind.tw/django-ninja-23/)
+- [卷 24：分頁（上）Django Ninja 的內建分頁器](https://blog.kyomind.tw/django-ninja-24/)
+- [卷 25：分頁（下）自定義分頁類別](https://blog.kyomind.tw/django-ninja-25/)
+- [卷 26：資料查詢與過濾（上）FilterSchema 介紹](https://blog.kyomind.tw/django-ninja-26/)
+- [卷 27：資料查詢與過濾（下）FilterSchema 多欄位查詢](https://blog.kyomind.tw/django-ninja-27/)
 
 ## 第七章：身分認證與單元測試
 
-- 卷 28：身分認證（Authentication）
-- 卷 29：單元測試——使用 pytest
+- 卷 28：身分認證——Session 認證與全域設定
+- 卷 29：單元測試——使用 Test Client 與 pytest 測試 API
 
 ## 第八章：系列回顧與完賽心得
 
