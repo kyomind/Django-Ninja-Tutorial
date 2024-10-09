@@ -60,8 +60,8 @@ def login_user(request: HttpRequest, payload: LoginRequest) -> dict[str, str]:
     登入使用者
     """
     user = authenticate(request, username=payload.username, password=payload.password)
-    if user is not None:
-        login(request, user)  # 將使用者登入狀態保存至 session
-        return {'message': '登入成功'}
-    else:
+    if user is None:
         raise HttpError(401, '帳號或密碼錯誤')
+
+    login(request, user)  # 將使用者登入狀態保存至 session
+    return {'message': '登入成功'}
