@@ -15,10 +15,10 @@ def get_users(request: HttpRequest) -> list[str]:
     return [user.username for user in users]
 
 
-@router.post(path='/users/', response={201: dict}, summary='新增使用者')
+@router.post(path='/users/', response={201: dict}, summary='新增使用者(註冊)', auth=None)
 def create_user(request: HttpRequest, payload: CreateUserRequest) -> tuple[int, dict]:
     """
-    新增使用者
+    新增使用者(註冊)
     """
     if User.objects.filter(email=payload.email).exists():
         raise HttpError(409, '使用者 email 已存在')
