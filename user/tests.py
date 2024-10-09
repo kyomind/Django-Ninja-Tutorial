@@ -6,12 +6,18 @@ from user.models import User
 pytestmark = pytest.mark.django_db
 
 
-def test_get_users(authenticated_client: Client, user: User) -> None:
+def test_get_users(authenticated_client: Client) -> None:
+    """
+    測試取得所有使用者
+    """
     response = authenticated_client.get('/users/')
     assert response.status_code == 200
 
 
 def test_create_user(client: Client) -> None:
+    """
+    測試新增使用者(註冊)
+    """
     response = client.post(
         '/users/',
         data={
@@ -26,6 +32,9 @@ def test_create_user(client: Client) -> None:
 
 
 def test_login_user(client: Client, user: User) -> None:
+    """
+    測試登入使用者
+    """
     response = client.post(
         '/users/login/',
         data={'username': 'testuser', 'password': 'testpassword123'},
