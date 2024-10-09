@@ -1,15 +1,7 @@
-import logging
-
 import pytest
 from django.test import Client
 
 from user.models import User
-
-handler = logging.StreamHandler()
-handler.setLevel(logging.INFO)
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-logger.addHandler(handler)
 
 
 @pytest.fixture(scope='session')
@@ -44,7 +36,6 @@ def authenticated_client(client: Client, user: User) -> Client:
         {'username': 'testuser', 'password': 'testpassword123'},
         content_type='application/json',
     )
-    logger.info(response.json())
     assert response.status_code == 200
     # 設定登入後的 cookies
     client.cookies.update(response.cookies)
