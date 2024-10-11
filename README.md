@@ -35,34 +35,34 @@
 
 ### 第一節：路由（Routers）
 
-- [卷 7：路由（上）傳統 Django 路由做法（兼章節概論）](https://blog.kyomind.tw/django-ninja-07/)
+- [卷 7：路由（上）傳統 Django 路由做法](https://blog.kyomind.tw/django-ninja-07/)
 - [卷 8：路由（下）Django Ninja 路由設定](https://blog.kyomind.tw/django-ninja-08/)
 
 ### 第二節：請求（HTTP Request）
 
-- [卷 9：請求（一）Django Ninja 處理 HTTP 請求概論（兼論 FBVs）](https://blog.kyomind.tw/django-ninja-09/)
-- [卷 10：請求（二）路徑參數（Path Parameters）](https://blog.kyomind.tw/django-ninja-10/)
-- [卷 11：請求（三）查詢參數（Query Parameters）](https://blog.kyomind.tw/django-ninja-11/)
+- [卷 9：請求（一）Django Ninja 處理 HTTP 請求](https://blog.kyomind.tw/django-ninja-09/)
+- [卷 10：請求（二）路徑參數 - Path Parameters](https://blog.kyomind.tw/django-ninja-10/)
+- [卷 11：請求（三）查詢參數 - Query Parameters](https://blog.kyomind.tw/django-ninja-11/)
 - [卷 12：請求（四）Request Body 與 Schema 介紹](https://blog.kyomind.tw/django-ninja-12/)
 
 ### 第三節：回應（HTTP Response）
 
-- [卷 13：回應（一）Django Ninja 處理 HTTP 回應概論](https://blog.kyomind.tw/django-ninja-13/)
-- [卷 14：回應（二）巢狀結構回應](https://blog.kyomind.tw/django-ninja-14/)
+- [卷 13：回應（一）Django Ninja 處理 HTTP 回應](https://blog.kyomind.tw/django-ninja-13/)
+- [卷 14：回應（二）用 Schema 建立巢狀結構回應](https://blog.kyomind.tw/django-ninja-14/)
 - [卷 15：回應（三）為何不用 ModelSchema？——相比 DRF，我更偏愛 Django Ninja 的理由](https://blog.kyomind.tw/django-ninja-15/)
 - [卷 16：回應（四）Resolver 方法——欄位資料格式化](https://blog.kyomind.tw/django-ninja-16/)
 
 ## 第四章：API 文件
 
 - [卷 17：API 文件（上）Django Ninja 文件實踐指南](https://blog.kyomind.tw/django-ninja-17/)
-- [卷 18：API 文件（下）用 Pydantic Field 設定範例與預設值](https://blog.kyomind.tw/django-ninja-18/)
+- [卷 18：API 文件（下）Pydantic Field 設定範例與預設值](https://blog.kyomind.tw/django-ninja-18/)
 
 ## 第五章：資料驗證與錯誤處理
 
-- [卷 19：資料驗證（上）單一欄位驗證——使用 Pydantic field_validator](https://blog.kyomind.tw/django-ninja-19/)
-- [卷 20：資料驗證（下）Pydantic model_validator 實現「跨欄位」驗證](https://blog.kyomind.tw/django-ninja-20/)
+- [卷 19：資料驗證（上）Pydantic 單一欄位驗證](https://blog.kyomind.tw/django-ninja-19/)
+- [卷 20：資料驗證（下）Pydantic 跨欄位驗證](https://blog.kyomind.tw/django-ninja-20/)
 - [卷 21：錯誤處理（上）HttpError 與自定義 HTTP 回應](https://blog.kyomind.tw/django-ninja-21/)
-- [卷 22：錯誤處理（下）全域錯誤處理——深入解析 Exception Handlers](https://blog.kyomind.tw/django-ninja-22/)
+- [卷 22：錯誤處理（下）全域錯誤處理——使用 Exception Handlers](https://blog.kyomind.tw/django-ninja-22/)
 
 ## 第六章，API 進階功能
 - [卷 23：檔案上傳——Django UploadedFile 介紹](https://blog.kyomind.tw/django-ninja-23/)
@@ -73,9 +73,9 @@
 
 ## 第七章：身分認證與單元測試
 
-- 卷 28：身分認證——Session 認證與全域設定
-- 卷 29：單元測試——使用 Test Client 與 pytest 測試 API
+- [卷 28：身分認證——Session 認證與全域設定](https://blog.kyomind.tw/django-ninja-28/)
+- [卷 29：單元測試——使用 Test Client 與 pytest 測試 API](https://blog.kyomind.tw/django-ninja-29/)
 
 ## 第八章：系列回顧與完賽心得
 
-- 卷 30：系列回顧與完賽心得
+- [卷 30：系列回顧與完賽心得](https://blog.kyomind.tw/django-ninja-30/)
