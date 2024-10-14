@@ -3,6 +3,7 @@ from typing import Self
 
 from ninja import Field, FilterSchema, Schema
 from pydantic import model_validator
+from django.core.exceptions import ValidationError
 
 from post.models import Post
 
@@ -64,7 +65,7 @@ class PostFilterSchema(FilterSchema):
             return self
 
         if not all([self.start_date, self.end_date]):
-            raise ValueError('開始日期和結束日期必須同時提供或同時不提供')
+            raise ValidationError('開始日期和結束日期必須同時提供或同時不提供')
 
         # 顯式告訴 Mypy 這兩個變數在這裡是非 None 的
         assert self.start_date is not None
@@ -74,9 +75,9 @@ class PostFilterSchema(FilterSchema):
             start_date_dt = datetime.strptime(self.start_date, '%Y-%m-%d')
             end_date_dt = datetime.strptime(self.end_date, '%Y-%m-%d')
         except ValueError:
-            raise ValueError('日期格式無效，應為 YYYY-MM-DD')
+            raise ValidationError('日期格式無效，應為 YYYY-MM-DD')
 
         if start_date_dt > end_date_dt:
-            raise ValueError('開始日期必須早於結束日期')
+            raise ValidationError('開始日期必須早於結束日期')
 
         return self

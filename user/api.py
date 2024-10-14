@@ -11,6 +11,9 @@ router = Router()
 
 @router.get(path='/users/', response=list[str], summary='取得所有使用者')
 def get_users(request: HttpRequest) -> list[str]:
+    """
+    取得所有使用者
+    """
     users = User.objects.all()
     return [user.username for user in users]
 
