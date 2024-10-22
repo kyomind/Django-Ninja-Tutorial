@@ -22,12 +22,12 @@
 ## 第一章：導讀與 Django Ninja 介紹
 
 - [卷 1：系列導讀 × 目標讀者](https://blog.kyomind.tw/django-ninja-01/)
-- [卷 2：架構 × 章節導覽](https://blog.kyomind.tw/django-ninja-02/)
+- [卷 2：教學架構 × 章節導覽](https://blog.kyomind.tw/django-ninja-02/)
 - [卷 3：Django Ninja 介紹——與 Django REST framework 主要區別](https://blog.kyomind.tw/django-ninja-03/)
 
 ## 第二章：範例專案與環境設定
 
-- [卷 4：範例專案介紹](https://blog.kyomind.tw/django-ninja-04/)
+- [卷 4：API 範例專案介紹](https://blog.kyomind.tw/django-ninja-04/)
 - [卷 5：Python 現代開發工具介紹](https://blog.kyomind.tw/django-ninja-05/)
 - [卷 6：環境設定 × 如何使用本專案](https://blog.kyomind.tw/django-ninja-06/)
 
