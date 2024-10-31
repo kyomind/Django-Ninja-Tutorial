@@ -11,7 +11,7 @@
 
 [2024 iThome 鐵人賽](https://ithelp.ithome.com.tw/2024ironman/)參賽作品：《[Django 忍法帖——Django Ninja 入門指南](https://ithelp.ithome.com.tw/users/20167825/ironman/7451)》
 
-這是一份為初學者準備的 Django Ninja 系列教學，旨在幫助你學習 Django Ninja，建立高效且現代的 API。
+面向初學者的 Django Ninja 系列教學，旨在幫助你學習 Django Ninja，建立高效且現代的 API。
 
 透過**範例專案**和 **30 篇文章**，你將逐步掌握 Django Ninja 的核心概念與使用方法，並了解它和 Django REST framework 的主要差異。
 
