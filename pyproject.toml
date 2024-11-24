@@ -23,7 +23,7 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
 [project]
-requires-python = ">=3.12" #影響pyupgrade檢查與自動修正的版本
+requires-python = ">=3.12" # 影響 pyupgrade 檢查與自動修正的版本
 
 [tool.ruff] # https://docs.astral.sh/ruff/settings/#top-level
 exclude = ["**/migrations/", "**/manage.py"] # 排除 migrations 目錄和 manage.py 檔案
