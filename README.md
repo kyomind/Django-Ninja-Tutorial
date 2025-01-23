@@ -20,7 +20,7 @@
 每個章節均包含具體的程式碼範例，讓你能**邊看邊學**，化理論為實踐。
 
 > [!NOTE]
-> 如果你對 Django 教學與 Python 開發文章感興趣，歡迎參考我的姐妹倉庫：[Django-Tutorial](https://github.com/kyomind/Django-Tutorial)。
+> 如果你對 Django、Django REST framework 教學與 Python 開發文章感興趣，歡迎參考我的姐妹倉庫：[Django-Tutorial](https://github.com/kyomind/Django-Tutorial)。
 
 ## 第一章：導讀與 Django Ninja 介紹
 
