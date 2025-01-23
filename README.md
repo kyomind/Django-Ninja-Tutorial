@@ -82,3 +82,5 @@
 ## 第八章：系列回顧與完賽心得
 
 - [卷 30：系列回顧與完賽心得](https://blog.kyomind.tw/django-ninja-30/)
+- [iThome 鐵人賽寫作攻略——新手必看指南](https://blog.kyomind.tw/ithome-ironman-tips/)
+
