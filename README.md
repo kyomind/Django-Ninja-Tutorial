@@ -9,7 +9,7 @@
 
 # Django Ninja 系列教學
 
-賀！本系列榮獲 Python 組「**優選**」獎 🏆（[得獎名單](https://ithelp.ithome.com.tw/2024ironman/reward)）
+>賀！本系列榮獲 Python 組「**優選**」獎 🏆（[得獎名單](https://ithelp.ithome.com.tw/2024ironman/reward)）
 
 [2024 iThome 鐵人賽](https://ithelp.ithome.com.tw/2024ironman/)參賽作品：《[Django 忍法帖——Django Ninja 入門指南](https://ithelp.ithome.com.tw/users/20167825/ironman/7451)》
 
